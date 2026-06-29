@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fila Real</title>
+
+    <!-- XLSX -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <h1>Fila Real</h1>
+            <p class="subtitle">Processamento de fila de consultas via CSV e PDF</p>
+        </header>
+
+
+        <section class="inputs">
+
+            <div class="input-group">
+                <label for="planilha-enviada">CSV da fila</label>
+                <input type="file" id="planilha-enviada" accept=".csv">
+            </div>
+
+
+            <div class="input-group">
+                <label for="pdf-enviado">PDF das consultas</label>
+                <input type="file" id="pdf-enviado" accept="application/pdf">
+            </div>
+
+        </section>
+
+
+        <section class="actions">
+            <button id="btn-download" disabled>
+                Baixar planilha atualizada
+            </button>
+        </section>
+
+    </main>
+
+
+    <!-- Dependências -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+    <!-- App -->
+    <script type="module" src="./js/app.js"></script>
+
+</body>
+
+</html>
